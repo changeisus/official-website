@@ -67,50 +67,59 @@
     
     <section class="ftco-section contact-section ftco-degree-bg">
       <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h4">Contact Information</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-          </div>
-        </div>
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
-          	<h4 class="mb-4">Do you have any questions?</h4>
+          	<h4 class="mb-4">Reach out to US</h4>
             <form action="#">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="Subject" required>
+              </div>
+              <label for="">Reaching out for ?</label>
+              <div class="form-group">
+                <input type="radio" name="reason" required> Collaboration &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="reason" required> Individual Enquiry &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio"name="reason" required> Donation
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send" class="btn btn-primary py-3 px-5">
               </div>
             </form>
-          
           </div>
 
-          <div class="col-md-6" id="map"></div>
+            <div class="col-md-6 mb-4">
+              <h2 class="h4 mb-4">Contact Information</h2>
+                <div class="my-2"><p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p></div>
+                <div class="my-4"><p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p></div>
+                <div class="my-4"><p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p></div>
+                <div class="my-4">
+                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                    <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    <li class="ftco-animate"><a href="#"><span class="icon-linkedin"></span></a></li>
+                  </ul>
+                </div>
+
+            </div>
         </div>
       </div>
+      <br>
+      <div class="container py-4">
+        <div class="row">
+            <div class="col-md-12" id="map">
+            </div>
+        </div>
+      </div>
+
     </section>
 
     <footer class="ftco-footer ftco-section img">

@@ -67,7 +67,7 @@
     
     <section class="ftco-section">
       <div class="container">
-        <div class="row d-flex">
+        <div class="row d-flex" id="blogs-parent">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
@@ -83,81 +83,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_5.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_6.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-3"><a href="#">Hurricane Irma has devastated Florida</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
+
         </div>
         <div class="row mt-5">
           <div class="col text-center">
@@ -176,8 +102,34 @@
         </div>
       </div>
     </section>
-		
+		<script src="./js/blog_data.js"></script>
+<script>
+  var blogs_parent=document.getElementById("blogs-parent")
+  var temp=""
+  for(var i=0;i<blog_data.length;i++){
+    var blog_item=blog_data[i]
+    temp+=`
+    
+    <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry align-self-stretch">
+              <a href="${blog_item["hyperlink"]}" class="block-20" style="background-image: url('${blog_item["imageURL"]}');">
+              </a>
+              <div class="text p-4 d-block">
+              	<div class="meta mb-3">
+                  <div><a href="${blog_item["hyperlink"]}">${blog_item["date"]}</a></div>
+                  <div><a href="${blog_item["hyperlink"]}">${blog_item["author"]}</a></div>
+                </div>
+                <h3 class="heading mt-3"><a href="${blog_item["hyperlink"]}">${blog_item["title"]}</a></h3>
+                <p>${blog_item["content"]}</p>
+              </div>
+            </div>
+          </div>
 
+    `
+  }
+  blogs_parent.innerHTML=temp;
+
+</script>
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">

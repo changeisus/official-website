@@ -109,16 +109,16 @@
     		</div>
     		<div class="col-md-6 volunteer pl-md-5 ftco-animate">
     			<h3 class="mb-3">Be a volunteer</h3>
-    			<form action="#" class="volunter-form">
+    			<form name="google-sheet" class="volunter-form" method="post" action="https://script.google.com/macros/s/AKfycbwuI_WkJhXzt6jHk-sd9QX3Rya14eWSZmUkd2ySYJqsxNzTk1XPzTIGaEHFw74Rbpjg/exec">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input name="Name" type="text" class="form-control" placeholder="Your Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
+              <input name="Email" type="text" class="form-control" placeholder="Your Email">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
-            </div>
+            </div> -->
             <div class="form-group">
               <input type="submit" value="Send Message" class="btn btn-white py-3 px-5">
             </div>
@@ -127,6 +127,20 @@
     		</div>
     	</div>
     </section>
+    <script>
+      const scriptURL ="https://script.google.com/macros/s/AKfycbwoam8o0oVctkh5NGZlgzozudFNzw3-DkzpG5hOKcuHHtPjJpY37TiHq92Z-M8XWOgl/exec"
+      const form = document.forms['google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        
+        fetch(scriptURL, { method: 'POST', body: new FormData(form),mode: 'no-cors'})
+          .then(response => alert("Thanks for Contacting us..! We Will Get Back To You Soon..."))
+          .then(form.reset())
+          .catch(error => console.error('Error!', error.message))
+      })
+
+    </script>
 
  
 		

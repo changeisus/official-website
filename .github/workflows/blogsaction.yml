@@ -3,7 +3,9 @@ name: Blog_action
 # on: push
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 */4 * * *'
+    # 0 */4 * * * every 4 hours
+    # '*/5 * * * *' every 5 min
 
 jobs:
   build:

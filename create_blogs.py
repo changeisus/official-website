@@ -226,6 +226,6 @@ entire_page='''
 </html>
 '''
 
-with open("blogs2.html","w+") as f:
+with open("blog.html","w+") as f:
     f.write(entire_page)
     f.close()

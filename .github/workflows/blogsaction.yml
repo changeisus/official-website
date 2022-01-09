@@ -3,7 +3,7 @@ name: Blog_action
 # on: push
 on:
   schedule:
-    - cron: '55 * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   build:

@@ -13,6 +13,8 @@ jobs:
       with:
         persist-credentials: false 
         fetch-depth: 
+    - name: Install Requirements
+      run: pip install requests
     - name: Create Blog Page
       run: python ./create_blogs.py
     - name: Commit files

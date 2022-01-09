@@ -1,4 +1,24 @@
-def create_single_blog(hyperlink,imageURL,date,author,title,content):
+        
+import requests
+import json
+
+query="""{
+  blogs{
+    id
+    title
+    author
+    date
+    imageUrl
+    content
+    hyperlink
+  }
+}"""
+url="https://api-ap-south-1.graphcms.com/v2/ckxzwqizw346x01xmeo566dx0/master"
+r = requests.post(url, json={'query': query})
+blogs=(r.json()["data"]["blogs"])
+
+
+def create_single_blog(title,author,date,imageURL,content,hyperlink):
     return f'''
     <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
@@ -15,17 +35,12 @@ def create_single_blog(hyperlink,imageURL,date,author,title,content):
             </div>
           </div>
     '''
-        
 
 
 blogs_temp=""
-for i in range(4):
-    blogs_temp+=create_single_blog("https://changeisus11.blogspot.com/2021/09/fast-fashion.html",
-    "https://1.bp.blogspot.com/-oU2SWR2cJCk/YVQmOfCeEKI/AAAAAAAAAPo/YrbzmNmny88hDv89W2x1Is4cjkm2lHYuACLcBGAsYHQ/s320/1234567.jpg",
-    "September 29, 2021",
-    "Arham Shah",
-    "Fast Fashion: An Overhyped Trend",
-    "The constant change in fashion trends’ affect on the environment.")
+for i in blogs:
+    blogs_temp+=create_single_blog(i["title"],i["author"],i["date"],i["imageUrl"],i["content"],i["hyperlink"])
+    print((i["title"],i["author"],i["date"],i["imageUrl"],i["content"],i["hyperlink"]))
 
 entire_page='''
 

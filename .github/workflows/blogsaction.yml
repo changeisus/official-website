@@ -1,9 +1,9 @@
 name: Blog_action
 
-on: push
-# on:
-#   schedule:
-#     - cron: '55 * * * *'
+# on: push
+on:
+  schedule:
+    - cron: '55 * * * *'
 
 jobs:
   build:

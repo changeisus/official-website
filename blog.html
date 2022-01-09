@@ -104,7 +104,13 @@
     </section>
 		<script src="./js/blog_data.js"></script>
 <script>
-  var blogs_parent=document.getElementById("blogs-parent")
+  function xyz(){
+    if (blog_data.length==0){
+
+      setTimeout("xyz",100)
+      return
+    }
+    var blogs_parent=document.getElementById("blogs-parent")
   var temp=""
   for(var i=0;i<blog_data.length;i++){
     var blog_item=blog_data[i]
@@ -128,6 +134,9 @@
     `
   }
   blogs_parent.innerHTML=temp;
+  }
+  xyz()
+
 
 </script>
     <footer class="ftco-footer ftco-section img">

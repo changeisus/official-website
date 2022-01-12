@@ -181,6 +181,32 @@
 	}
 	counter();
 
+	var counter2 = function() {
+		
+		$('.section-counter2').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+
+				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+				$('.number').each(function(){
+					var $this = $(this),
+						num = $this.data('number');
+						console.log(num);
+					$this.animateNumber(
+					  {
+					    number: num,
+					    numberStep: comma_separator_number_step
+					  }, 7000
+					);
+				});
+				
+			}
+
+		} , { offset: '95%' } );
+
+	}
+	counter2();
+
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {

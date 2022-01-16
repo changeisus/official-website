@@ -47,7 +47,7 @@ entire_page='''
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Welfare - Free Bootstrap 4 Template by Colorlib</title>
+    <title>CHANGE IS US - Changing Today for Tomorrow</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     

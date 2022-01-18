@@ -1,4 +1,54 @@
+        
+import requests
+import json
 
+query="""{
+  galleries{
+    photo {
+      url
+    }
+  }
+}"""
+url="https://api-ap-south-1.graphcms.com/v2/ckxzwqizw346x01xmeo566dx0/master"
+r = requests.post(url, json={'query': query})
+images=(r.json()["data"]["galleries"])
+
+def getAllImages(images):
+    imgs=[]
+    for i in images:
+        for j in i['photo']:
+            imgs.append(j)
+    return imgs
+
+def create_single_frame(image_url):
+    return f'''
+    <a href="{image_url}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({image_url});">
+        <div class="icon d-flex justify-content-center align-items-center">
+            <span class="icon-search"></span>
+        </div>
+    </a>
+    '''
+def create_row(row):
+    return f'''
+    <div class="d-md-flex">
+    {row}
+    </div>
+    '''
+
+gallery_temp=""
+row_temp=""
+c=0
+for i in getAllImages(images):
+    if c%4==0:
+        gallery_temp += create_row(row_temp)
+        row_temp=""
+    row_temp+=create_single_frame(i["url"])
+    c+=1
+if row_temp!="":
+    gallery_temp += create_row(row_temp)
+    
+
+entire_page='''
 
 <!DOCTYPE html>
 <html lang="en">
@@ -95,61 +145,7 @@
     </div>
 
     <section class="ftco-section ftco-gallery">
-    	<div class="container">
-    <div class="d-md-flex">
-    
-    </div>
-    
-    <div class="d-md-flex">
-    
-    <a href="https://media.graphcms.com/MFpmarTqTrKRZEZLGsOv" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/MFpmarTqTrKRZEZLGsOv);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    <a href="https://media.graphcms.com/zv6EG7RSmgIEhXYNhKIQ" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/zv6EG7RSmgIEhXYNhKIQ);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    <a href="https://media.graphcms.com/RJjNCgYFQwKlGiPl5Xlc" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/RJjNCgYFQwKlGiPl5Xlc);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    <a href="https://media.graphcms.com/4PvSmpAvTMWbiILywuDg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/4PvSmpAvTMWbiILywuDg);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    </div>
-    
-    <div class="d-md-flex">
-    
-    <a href="https://media.graphcms.com/dGzpMcTsQTeNwGc0YKnZ" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/dGzpMcTsQTeNwGc0YKnZ);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    <a href="https://media.graphcms.com/QgUbz6sWSvyF2amy00Rk" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/QgUbz6sWSvyF2amy00Rk);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    <a href="https://media.graphcms.com/TB7nHxJhQeCMWBCiMGtr" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(https://media.graphcms.com/TB7nHxJhQeCMWBCiMGtr);">
-        <div class="icon d-flex justify-content-center align-items-center">
-            <span class="icon-search"></span>
-        </div>
-    </a>
-    
-    </div>
-    
+    	<div class="container">'''+gallery_temp+'''
 
 
 
@@ -260,3 +256,8 @@
     
   </body>
 </html>
+'''
+
+with open("gallery.html","w+") as f:
+    f.write(entire_page)
+    f.close()

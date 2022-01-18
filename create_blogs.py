@@ -103,8 +103,8 @@ entire_page='''
                 <a href="project.html#donation" class="dropdown-item">Donation Drives</a>             
               </div>
             </li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blogs</a></li>
-            <li class="nav-item active"><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li class="nav-item active"><a href="blog.html" class="nav-link">Blogs</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Impact</a>
               <div class="dropdown-menu">

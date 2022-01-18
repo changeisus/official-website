@@ -76,26 +76,53 @@ entire_page='''
   <body>
     
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Welfare</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
-
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Change Is Us</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+  
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">About</a>
+              <div class="dropdown-menu">
+                <a href="about.html#problems" class="dropdown-item">Problem</a>
+                <a href="about.html#solution" class="dropdown-item">Solution</a>
+                <a href="about.html#ourteam" class="dropdown-item">Our Team</a>
+                <a href="about.html#ouradvisors" class="dropdown-item">Our Advisors</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="apply.html" class="nav-link">Apply</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Projects</a>
+              <div class="dropdown-menu">
+                <a href="project.html#cleanup" class="dropdown-item">Beach Clean up Drives</a>
+                <a href="project.html#donation" class="dropdown-item">Donation Drives</a>             
+              </div>
+            </li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blogs</a></li>
+            <li class="nav-item active"><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Impact</a>
+              <div class="dropdown-menu">
+                <a href="https://docs.google.com/presentation/d/1gCgncnPpnOV-lC5f5nNkuuQByAhRXivbv7FKQ_qyV7o/edit?usp=sharing" target="_blank" class="dropdown-item">2019 - 2021</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Our Partners</a>
+              <div class="dropdown-menu">
+                <a href="partners.html#sponsors" class="dropdown-item">Our Sponsors</a>
+                <a href="partners.html#collaborators" class="dropdown-item">Our Collaborators</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     <!-- END nav -->
     
     <div class="hero-wrap" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
@@ -119,80 +146,79 @@ entire_page='''
 
     </section>
 
-    <footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
+    <footer class="ftco-footer ftco-section img pt-4 pb-2">
+      <div class="overlay"></div>
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-3">
-            <div class="ftco-footer-widget mb-4">
+        <div class="row mb-1">
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-0">
               <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>
+                Change Is Us is a youth-led initiative working tirelessly to create positive
+                societal and environmental change. Save the planet and spread smiles among the
+                under-privileged. Join us in our endeavour today!
+              </p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://instagram.com/change.is.us?utm_medium=copy_link"
+                    target="_blank"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/company/change-is-us-11" target="_blank"><span
+                      class="icon-linkedin"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/changeisus11?t=u7ZlHmzLcl-GjDqrc8oQMw&s=08"
+                    target="_blank"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/Change-Is-Us-113061006834617/"
+                    target="_blank"><span class="icon-facebook"></span></a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2">
-             <div class="ftco-footer-widget mb-4 ml-md-4">
+          <div class="col-md-3 ml-md-4">
+            <div class="ftco-footer-widget mb-4 ml-md-0">
               <h2 class="ftco-heading-2">Site Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Home</a></li>
-                <li><a href="#" class="py-2 d-block">About</a></li>
-                <li><a href="#" class="py-2 d-block">Donate</a></li>
-                <li><a href="#" class="py-2 d-block">Causes</a></li>
-                <li><a href="#" class="py-2 d-block">Event</a></li>
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
+                <div class="row">
+                  <div class="col-6">
+                    <li><a href="index.html" target="_blank" class="py-3 d-block">Home</a></li>
+                    <li><a href="about.html" target="_blank"" class=" py-3 d-block">About</a></li>
+                    <li><a href="apply.html" target="_blank" class="py-3 d-block">Apply</a></li>
+                    <li><a href="project.html" target="_blank" class="py-3 d-block">Project</a></li>
+                  </div>
+                  <div class="col-6">
+                    <li><a href="blog.html" target="_blank" class="py-3 d-block">Blogs</a></li>
+                    <li><a href="#" target="_blank" class="py-3 d-block">Impact</a></li>
+                    <li><a href="partners.html" target="_blank" class="py-3 d-block">Partners</a></li>
+                    <li><a href="contact.html" target="_blank" class="py-3 d-block">Contact</a></li>
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4 ml-md-4">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Reach Us</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li class="py-2"><span class="icon icon-map-marker"></span><span class="text">Girgaum Chowpatty Beach,
+                      Beachfront Opposite Cafe Ideal</span></li>
+                  <li class="py-2"><span class="icon icon-phone"></span><span class="text">+91 773896986, +91
+                      9869843834</span></li>
+                  <li class="py-2"><a href="mailto:changeisus.website@gmail.com"><span
+                        class="icon icon-envelope"></span><span class="text">changeisus.website@gmail.com</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> |
+              All rights reserved by <span class="heading"><a href="index.html">Change Is Us</span></a>
+            </p>
+            <!-- <p> -->
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!-- </p> -->
           </div>
         </div>
       </div>

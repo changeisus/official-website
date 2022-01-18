@@ -1,9 +1,8 @@
 name: Blog_action
-
-# on: push
 on:
   repository_dispatch:
-    types:[start-workflow]
+      types: [start-example-workflow]
+# on: push
 # on:
 #   schedule:
 #     - cron: '0 */4 * * *'

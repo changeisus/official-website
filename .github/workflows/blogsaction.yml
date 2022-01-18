@@ -2,8 +2,11 @@ name: Blog_action
 
 # on: push
 on:
-  schedule:
-    - cron: '0 */4 * * *'
+  repository_dispatch:
+    types:[start-workflow]
+# on:
+#   schedule:
+#     - cron: '0 */4 * * *'
     # 0 */4 * * * every 4 hours
     # '*/5 * * * *' every 5 min
 
@@ -14,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false 
-        fetch-depth: 
+#         fetch-depth: 
     - name: Install Requirements
       run: pip install requests
     - name: Create Blog Page

@@ -242,7 +242,7 @@ def createFile(blogs):
     </html>
     '''
 
-    with open("blog_bs.html","w+") as f:
+    with open("blog.html","w+") as f:
         f.write(entire_page)
         f.close()
 

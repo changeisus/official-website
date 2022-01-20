@@ -18,9 +18,9 @@ jobs:
         persist-credentials: false 
 #         fetch-depth: 
     - name: Install Requirements
-      run: pip install requests
+      run: pip install requests beautifulsoup4 html5lib
     - name: Create Blog Page
-      run: python ./create_blogs.py
+      run: python ./automate_blogs.py
     - name: Commit files
       run: |
         git add .

@@ -29,7 +29,7 @@ def create_single_blog(title,author,date,imageURL,content,hyperlink):
 def createFile(blogs):
     blogs_temp=""
     for i in blogs:
-        blogs_temp+=create_single_blog(i["title"],i["author"],i["date"],i["imageURL"],i["content"],i["hyperlink"])
+        blogs_temp+=create_single_blog(i["title"],i["author"],i["date"],i["imageURL"],i["content"][0:100]+"...",i["hyperlink"])
         # print((i["title"],i["author"],i["date"],i["imageURL"],i["content"],i["hyperlink"]))
 
     entire_page='''

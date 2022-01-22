@@ -8003,6 +8003,7 @@ button.bg-dark:focus {
 .mb-4,
 .my-4 {
   margin-bottom: 1.5rem !important;
+  color: inherit;
 }
 
 .ml-4,
@@ -10036,25 +10037,25 @@ h5,
   display: block;
   width: 100%;
   padding: 30px;
-  color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
 }
 .ftco-intro .block-18.color-1 {
-  background: var(--orange);;
+  background: #003755;
 }
 .ftco-intro .block-18.color-2 {
-  background: #fa8f3d;
+  background: #004B73;
 }
 .ftco-intro .block-18.color-3 {
-  background: #faaa3a;
+  background: #01cbe1;
 }
 .ftco-intro .block-18 .text strong {
   font-size: 60px;
-  color: #000;
+  /* color: #000; */
   font-weight: 300;
 }
 .ftco-intro .block-18 .text span {
   display: block;
-  color: #000;
+  /* color: #000; */
   font-size: 24px;
 }
 

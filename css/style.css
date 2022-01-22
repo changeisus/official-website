@@ -9762,8 +9762,8 @@ h5,
   right: 0;
   bottom: 0;
   content: "";
-  opacity: 0;
-  background: #000;
+  opacity: 0.5;
+  background: #003755;
 }
 
 .slider-text {

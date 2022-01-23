@@ -111,6 +111,14 @@ p {
   margin-bottom: 1rem;
 }
 
+.terms {
+  color: rgba(255, 255, 255, 0.7);
+  display: inline;
+}
+.terms a:hover {
+  color: white;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -2032,7 +2040,9 @@ pre code {
 .table-responsive > .table-bordered {
   border: 0;
 }
-
+.form-label {
+  border: none;
+}
 .form-control {
   display: block;
   width: 100%;

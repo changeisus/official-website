@@ -10100,7 +10100,7 @@ h5,
 }
 .cause-entry .img {
   display: block;
-  height: 300px;
+  height: 400px;
 }
 @media (min-width: 768px) {
   .cause-entry .text {
@@ -11940,4 +11940,28 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+.testimonial-img-desktop{
+  display: none;
+}
+.testimonial-img{
+  position: absolute;
+  top: 40px;
+  max-width: 80% !important;
+  max-height: 50%;
+  width: unset !important;
+}
+@media screen and (min-width: 1400px) {
+  .testimonial-img-desktop{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial-img-mobile{
+    display: none;
+  }
+  .cause-entry .text{
+    margin-top: unset;
+  }
+  
 }

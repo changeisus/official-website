@@ -2681,6 +2681,12 @@ fieldset:disabled a.btn {
   background-color: #4ac7ea;
   border-color: #3fc3e8;
 }
+
+/* Custom CSS for dropdown-toggle */
+.dropdown-toggle{ 
+  cursor: default;
+}
+
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
@@ -9533,7 +9539,7 @@ h5,
 }
 
 .text-primary {
-  color: var(--orange); !important;
+  color: var(--orange) !important;
 }
 
 .ftco-navbar-light {
@@ -9657,7 +9663,7 @@ h5,
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .ftco-navbar-light.scrolled .nav-item.active > a {
-  color: var(--orange); !important;
+  color: var(--orange) !important;
 }
 .ftco-navbar-light.scrolled .nav-item.cta > a {
   color: #fff !important;
@@ -9711,7 +9717,7 @@ h5,
   color: #000 !important;
 }
 .ftco-navbar-light.scrolled .nav-link.active {
-  color: var(--orange); !important;
+  color: var(--orange) !important;
 }
 .ftco-navbar-light.scrolled.awake {
   margin-top: 0px;
@@ -9842,7 +9848,7 @@ h5,
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin-top: -10px;
-  color: var(--orange); !important;
+  color: var(--orange) !important;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
@@ -10753,7 +10759,7 @@ textarea.form-control {
 }
 
 .bg-primary {
-  background: var(--orange); !important;
+  background: var(--orange) !important;
 }
 
 .ftco-section .ftco-sub-title {
@@ -11061,6 +11067,7 @@ textarea.form-control {
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -11342,9 +11349,9 @@ textarea.form-control {
   }
 }
 .block-17 form .search-submit:hover {
-  background: var(--orange); !important;
+  background: var(--orange) !important;
   color: #fff !important;
-  border: 1px solid var(--orange); !important;
+  border: 1px solid var(--orange) !important;
 }
 
 .block-18 .icon > span {

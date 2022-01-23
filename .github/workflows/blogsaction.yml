@@ -21,6 +21,8 @@ jobs:
       run: pip install requests beautifulsoup4 html5lib
     - name: Create Blog Page
       run: python ./automate_blogs.py
+    - name: Create Gallery Page
+      run: python ./create_gallery.py
     - name: Commit files
       run: |
         git add .

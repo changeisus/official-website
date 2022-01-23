@@ -14,10 +14,12 @@ r = requests.post(url, json={'query': query})
 images=(r.json()["data"]["galleries"])
 
 def getAllImages(images):
+
     imgs=[]
     for i in images:
         for j in i['photo']:
             imgs.append(j)
+    print(len(imgs))
     return imgs
 
 def create_single_frame(image_url):

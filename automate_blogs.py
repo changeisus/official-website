@@ -1,5 +1,7 @@
         
 
+from msilib.schema import ControlEvent
+from urllib.error import ContentTooShortError
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,7 +31,14 @@ def create_single_blog(title,author,date,imageURL,content,hyperlink):
 def createFile(blogs):
     blogs_temp=""
     for i in blogs:
-        blogs_temp+=create_single_blog(i["title"],i["author"],i["date"],i["imageURL"],i["content"][0:100]+"...",i["hyperlink"])
+        # cleaning the string because html couldnt parse those characters
+        content=i["content"][0:100]
+        content=content.replace("’","'")
+        content=content.replace("“","'")
+        content=content.replace("”","'")
+        content=content.strip()
+        # print(content)
+        blogs_temp+=create_single_blog(i["title"],i["author"],i["date"],i["imageURL"],content+"...",i["hyperlink"])
         # print((i["title"],i["author"],i["date"],i["imageURL"],i["content"],i["hyperlink"]))
 
     entire_page='''
@@ -242,7 +251,7 @@ def createFile(blogs):
     </html>
     '''
 
-    with open("blog.html","w+") as f:
+    with open("xyz.html","w+") as f:
         f.write(entire_page)
         f.close()
 

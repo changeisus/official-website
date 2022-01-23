@@ -20,7 +20,7 @@ def getAllImages(images):
         for j in i['photo']:
             imgs.append(j)
     print(len(imgs))
-    return imgs
+    return imgs.reverse()
 
 def create_single_frame(image_url):
     return f'''

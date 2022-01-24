@@ -2032,7 +2032,9 @@ pre code {
 .table-responsive > .table-bordered {
   border: 0;
 }
-
+.form-label {
+  border: none;
+}
 .form-control {
   display: block;
   width: 100%;
@@ -11964,4 +11966,18 @@ textarea.form-control {
     margin-top: unset;
   }
   
+}
+
+.terms {
+  display: inline;
+  text-decoration: underline !important;
+}
+.terms:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.terms-data{
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
 }

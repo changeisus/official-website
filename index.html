@@ -798,24 +798,119 @@
           <div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
         </div>
         <div class="col-md-6 volunteer pl-md-5 ftco-animate">
-          <h3 class="mb-3">Be a volunteer</h3>
-          <form action="#" class="volunter-form">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-              <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-white py-3 px-5">
-            </div>
-          </form>
+            <h3 class="mb-3">Registration for Clean-Up Drives</h3>
+            <form name="apply-for-drive"
+              class="volunter-form"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Name"
+                  name="Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Email"
+                  name="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Phone No."
+                  name="Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Age" name="Age" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Location of Residence"
+                  name="Location"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="College/Organization/School"
+                  name="Organization"
+                  required
+                />
+              </div>
+              <label for="" style="color: rgba(255, 255, 255, 0.7); font-size: 18px;">Drive Date</label>    
+              <div class="form-group">            
+                <input
+                  type="radio"
+                  id="26-jan-21"
+                  name="Date"
+                  value="26/01/2022" required
+                />
+                <label
+                  for="26-jan-21"
+                  class="form-control"
+                  style="border: none; display: inline"
+                  >26th January 2021</label
+                ><br />
+                <input
+                  type="radio"
+                  id="30-jan-21"
+                  name="Date"
+                  value="30/01/2022" required
+                />
+                <label
+                  for="30-jan-21"
+                  class="form-control"
+                  style="border: none; display: inline"
+                  >30th January 2021</label
+                ><br />
+                
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" value="terms" required/>
+                <label
+                  for="terms"
+                  class="form-control"
+                  style="border: none; display: inline"
+                  >I agree to <a class="terms">terms and conditions</a></label><br />
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Apply"
+                  class="btn btn-white py-3 px-5"
+                />
+              </div>
+            </form>
+            <script>
+              const scriptURL ="https://script.google.com/macros/s/AKfycbyDiduABuvYlBS7eKHXnpK_usM0FrqKomRp6t93GNNrxrtJNSpy/exec"
+              const form = document.forms['apply-for-drive']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                
+                fetch(scriptURL, { method: 'POST', body: new FormData(form),mode: 'no-cors'})
+                  .then(response => alert("You have successfully applied for the drive! We will connect with you for further details"))
+                  .then(form.reset())
+                  .catch(error => console.error('Error!', error.message))
+              })
+        
+            </script>
+          </div>
         </div>
       </div>
-    </div>
   </section>
 
   <footer class="ftco-footer ftco-section img pt-4 pb-2">

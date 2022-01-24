@@ -799,17 +799,15 @@
         </div>
         <div class="col-md-6 volunteer pl-md-5 ftco-animate">
             <h3 class="mb-3">Registration for Clean-Up Drives</h3>
-            <!-- Deployement Id - AKfycbzXHj4l7SK4tyzfUZAuXGtKrq4EFvXvHvXjmN2qbamIQ3QyRIITURtYHja5nF1pikFCwg
-            Web App URL - https://script.google.com/macros/s/AKfycbzXHj4l7SK4tyzfUZAuXGtKrq4EFvXvHvXjmN2qbamIQ3QyRIITURtYHja5nF1pikFCwg/exec -->
-            <form
-              action="https://script.google.com/macros/s/AKfycbzXHj4l7SK4tyzfUZAuXGtKrq4EFvXvHvXjmN2qbamIQ3QyRIITURtYHja5nF1pikFCwg/exec"
+            <form name="apply-for-drive"
               class="volunter-form"
             >
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="*Your Name"
+                  placeholder="Your Name"
+                  name="Name"
                   required
                 />
               </div>
@@ -817,7 +815,8 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="*Your Email"
+                  placeholder="Your Email"
+                  name="Email"
                   required
                 />
               </div>
@@ -825,34 +824,39 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="*Phone No."
+                  placeholder="Phone No."
+                  name="Number"
                   required
                 />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Age" />
+                <input type="text" class="form-control" placeholder="Age" name="Age" />
               </div>
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Location of Residence"
+                  name="Location"
+                  required
                 />
               </div>
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Name of the College/Organization/School (If participating as a group)"
+                  placeholder="College/Organization/School"
+                  name="Organization"
+                  required
                 />
               </div>
-              <!-- <p> * Drive Date</p> -->
-              <div class="form-group">
+              <label for="" style="color: rgba(255, 255, 255, 0.7); font-size: 18px;">Drive Date</label>    
+              <div class="form-group">            
                 <input
                   type="radio"
                   id="26-jan-21"
-                  name="drive_date"
-                  value="26-jan-21"
+                  name="Date"
+                  value="26/01/2022" required
                 />
                 <label
                   for="26-jan-21"
@@ -860,17 +864,28 @@
                   style="border: none; display: inline"
                   >26th January 2021</label
                 ><br />
+                <input
+                  type="radio"
+                  id="30-jan-21"
+                  name="Date"
+                  value="30/01/2022" required
+                />
+                <label
+                  for="30-jan-21"
+                  class="form-control"
+                  style="border: none; display: inline"
+                  >30th January 2021</label
+                ><br />
+                
               </div>
               <div class="form-group">
-                <input type="checkbox" id="terms" name="terms" value="terms" />
+                <input type="checkbox" id="terms" name="terms" value="terms" required/>
                 <label
                   for="terms"
                   class="form-control"
                   style="border: none; display: inline"
-                  >I agree to <a href="#" class="terms">terms and conditions</a></label
-                ><br />
+                  >I agree to <a class="terms">terms and conditions</a></label><br />
               </div>
-              <p>Fields marked as * are compulsory</p>
               <div class="form-group">
                 <input
                   type="submit"
@@ -879,6 +894,20 @@
                 />
               </div>
             </form>
+            <script>
+              const scriptURL ="https://script.google.com/macros/s/AKfycbyDiduABuvYlBS7eKHXnpK_usM0FrqKomRp6t93GNNrxrtJNSpy/exec"
+              const form = document.forms['apply-for-drive']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                
+                fetch(scriptURL, { method: 'POST', body: new FormData(form),mode: 'no-cors'})
+                  .then(response => alert("You have successfully applied for the drive! We will connect with you for further details"))
+                  .then(form.reset())
+                  .catch(error => console.error('Error!', error.message))
+              })
+        
+            </script>
           </div>
         </div>
       </div>

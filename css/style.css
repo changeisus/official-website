@@ -111,14 +111,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.terms {
-  color: rgba(255, 255, 255, 0.7);
-  display: inline;
-}
-.terms a:hover {
-  color: white;
-}
-
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -11974,4 +11966,18 @@ textarea.form-control {
     margin-top: unset;
   }
   
+}
+
+.terms {
+  display: inline;
+  text-decoration: underline !important;
+}
+.terms:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.terms-data{
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
 }

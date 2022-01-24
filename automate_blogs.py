@@ -111,7 +111,7 @@ def createFile(blogs):
                 </div>
                 </li>
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Collabrations</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Collaboration</a>
                 <div class="dropdown-menu">
                     <a href="partners.html#partners" class="dropdown-item">Our Partners</a>
                     <a href="partners.html#collaborators" class="dropdown-item">Our Collaborators</a>

@@ -11983,6 +11983,11 @@ textarea.form-control {
 }
 
 .btn.btn-secondary{
-  background: var(--orange);
-  border-color: var(--orange);
+  background: #01cbe1;
+  border-color: #01cbe1;
+}
+
+.btn.btn-secondary:hover{
+  border-color: #01cbe1;
+  color: #01cbe1;
 }

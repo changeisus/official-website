@@ -122,7 +122,7 @@
             <div class="text">
               <h3 class="mb-4">Participate in a Drive</h3>
               <p>Come participate in our upcoming drive to help transform the society, one drive at a time.</p>
-              <p><a href="#" class="btn btn-white px-3 py-2 mt-2">Register for Drive</a></p>
+              <p><a href="#apply-for-drive-form" class="btn btn-white px-3 py-2 mt-2">Register for Drive</a></p>
             </div>
           </div>
         </div>
@@ -792,128 +792,155 @@
     <section
       class="ftco-section-3 img"
       style="background-image: url(images/bg_3.jpg)"
+      id="apply-for-drive-form"
     >
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row d-md-flex">
-        <div class="col-md-6 d-flex ftco-animate">
-          <div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
-        </div>
-        <div class="col-md-6 volunteer pl-md-5 ftco-animate">
-            <h3 class="mb-3">Registration for Clean-Up Drives</h3>
-            <form name="apply-for-drive"
-              class="volunter-form"
-            >
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  name="Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Email"
-                  name="Email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Phone No."
-                  name="Number"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Age" name="Age" />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Location of Residence"
-                  name="Location"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="College/Organization/School"
-                  name="Organization"
-                  required
-                />
-              </div>
-              <label for="" style="color: rgba(255, 255, 255, 0.7); font-size: 18px;">Drive Date</label>    
-              <div class="form-group">            
-                <input
-                  type="radio"
-                  id="26-jan-21"
-                  name="Date"
-                  value="26/01/2022" required
-                />
-                <label
-                  for="26-jan-21"
-                  class="form-control"
-                  style="border: none; display: inline"
-                  >26th January 2021</label
-                ><br />
-                <input
-                  type="radio"
-                  id="30-jan-21"
-                  name="Date"
-                  value="30/01/2022" required
-                />
-                <label
-                  for="30-jan-21"
-                  class="form-control"
-                  style="border: none; display: inline"
-                  >30th January 2021</label
-                ><br />
-                
-              </div>
-              <div class="form-group">
-                <input type="checkbox" id="terms" name="terms" value="terms" required/>
-                <label
-                  for="terms"
-                  class="form-control"
-                  style="border: none; display: inline"
-                  >I agree to <a class="terms">terms and conditions</a></label><br />
-              </div>
-              <div class="form-group">
-                <input
-                  type="submit"
-                  value="Apply"
-                  class="btn btn-white py-3 px-5"
-                />
-              </div>
-            </form>
-            <script>
-              const scriptURL ="https://script.google.com/macros/s/AKfycbyDiduABuvYlBS7eKHXnpK_usM0FrqKomRp6t93GNNrxrtJNSpy/exec"
-              const form = document.forms['apply-for-drive']
-            
-              form.addEventListener('submit', e => {
-                e.preventDefault()
-                
-                fetch(scriptURL, { method: 'POST', body: new FormData(form),mode: 'no-cors'})
-                  .then(response => alert("You have successfully applied for the drive! We will connect with you for further details"))
-                  .then(form.reset())
-                  .catch(error => console.error('Error!', error.message))
-              })
-        
-            </script>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex">
+          <div class="col-md-6 d-flex ftco-animate">
+            <div class="img img-2 align-self-stretch" style="background-image: url(images/form_img.JPG);"></div>
+          </div>
+          <div class="col-md-6 volunteer pl-md-5 ftco-animate">
+              <h3 class="mb-3">Registration for Clean-Up Drives</h3>
+              <form name="apply-for-drive"
+                class="volunter-form"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Name"
+                    name="Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Your Email"
+                    name="Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Phone No."
+                    name="Number"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Age" name="Age" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Location of Residence"
+                    name="Location"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="College/Organization/School"
+                    name="Organization"
+                    required
+                  />
+                </div>
+                <label for="" style="color: rgba(255, 255, 255, 0.7); font-size: 18px;">Drive Date</label>    
+                <div class="form-group">            
+                  <input
+                    type="radio"
+                    id="26-jan-21"
+                    name="Date"
+                    value="26/01/2022" required
+                  />
+                  <label
+                    for="26-jan-21"
+                    class="form-control"
+                    style="border: none; display: inline"
+                    >26th January 2021</label
+                  ><br />
+                  <input
+                    type="radio"
+                    id="30-jan-21"
+                    name="Date"
+                    value="30/01/2022" required
+                  />
+                  <label
+                    for="30-jan-21"
+                    class="form-control"
+                    style="border: none; display: inline"
+                    >30th January 2021</label
+                  ><br />
+                  
+                </div>
+                <div class="form-group">
+                  <input type="checkbox" id="terms" name="terms" value="terms" required/>
+                  <label
+                    for="terms"
+                    class="form-control"
+                    style="border: none; display: inline"
+                    >I agree to <a class="terms" data-toggle="modal" data-target="#tncModal" id="terms-modal-trigger">terms and conditions</a></label><br />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="submit"
+                    value="Apply"
+                    class="btn btn-white py-3 px-5"
+                  />
+                </div>
+              </form>
+              <script>
+                const scriptURL ="https://script.google.com/macros/s/AKfycbyDiduABuvYlBS7eKHXnpK_usM0FrqKomRp6t93GNNrxrtJNSpy/exec"
+                const form = document.forms['apply-for-drive']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form),mode: 'no-cors'})
+                    .then(response => alert("You have successfully applied for the drive! We will connect with you for further details"))
+                    .then(form.reset())
+                    .catch(error => console.error('Error!', error.message))
+                })
+          
+              </script>
           </div>
         </div>
       </div>
-  </section>
+    </section>
+
+    <!-- Modal -->                  
+    <div class="modal fade" id="tncModal" tabindex="-1" role="dialog" aria-labelledby="terms-and-conditions" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="terms-and-conditions">Terms and Conditions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>(1) I confirm that I do not have any medical history of fever, cold or any other COVID-19 symptoms in the past 15 days. </p>
+            <p>(2) I confirm that I have not been asked to stay at home quarantine in the past 15 days. </p>
+            <p>(3) I agree to maintain physical distancing and follow all the safety norms as prescribed by the State and local authorities. </p>
+            <p>(4) I certify that the information provided in this form is accurate and complete. I also acknowledge my understanding of the outlined risk factors and agree to follow the directions within this form to participate in the clean-up drive. </p>
+            <p>(5) I undertake this volunteering at my own risk and 'Change Is Us', 'Seafins' or any other authority/organization shall not be liable for any costs incurred or damages suffered upon, either direct or indirect, as a result of or incidental to such illness. </p>
+            <P>(6) Information collected with this form will remain confidential. Any personal information will not be disclosed unless required by law or with the individual’s express consent. </p>
+            <p>(7) I am doubly vaccinated i.e. I have taken both doses of the COVID vaccine.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <footer class="ftco-footer ftco-section img pt-4 pb-2">
     <div class="overlay"></div>

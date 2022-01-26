@@ -9510,7 +9510,8 @@ body.menu-show {
 }
 
 span {
-  color: #bfbfbf;
+  /* color: #ffffffdd; */
+  color:#f4f4f4dc ;
 }
 
 a {

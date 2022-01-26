@@ -11981,3 +11981,13 @@ textarea.form-control {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
 }
+
+.btn.btn-secondary{
+  background: #01cbe1;
+  border-color: #01cbe1;
+}
+
+.btn.btn-secondary:hover{
+  border-color: #01cbe1;
+  color: #01cbe1;
+}

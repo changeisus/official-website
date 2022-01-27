@@ -5,6 +5,7 @@
   <title>Home - Change Is Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="./var_constants.js"></script>
 
   <link rel="shortcut icon" href="images/ciu-logo-favicon.ico" type="image/x-icon">
 
@@ -872,33 +873,38 @@
                   />
                 </div>
                 <label for="" style="color: rgba(255, 255, 255, 0.7); font-size: 18px;">Drive Date</label>    
-                <div class="form-group">            
-                  <input
-                    type="radio"
-                    id="26-jan-21"
-                    name="Date"
-                    value="26/01/2022" required
-                  />
-                  <label
-                    for="26-jan-21"
-                    class="form-control"
-                    style="border: none; display: inline"
-                    >26th January 2021</label
-                  ><br />
-                  <input
-                    type="radio"
-                    id="30-jan-21"
-                    name="Date"
-                    value="30/01/2022" required
-                  />
-                  <label
-                    for="30-jan-21"
-                    class="form-control"
-                    style="border: none; display: inline"
-                    >30th January 2021</label
-                  ><br />
+                <div class="form-group" id="dates-here">            
+
                   
                 </div>
+                <script>
+                  temp=`
+                  <input
+                    type="radio"
+                    id="${drive_date_1}"
+                    name="Date"
+                    value="${drive_date_1}" required
+                  />
+                  <label
+                    for="${drive_date_1}"
+                    class="form-control"
+                    style="border: none; display: inline"
+                    >${drive_date_1}</label
+                  ><br />
+                  <input
+                    type="radio"
+                    id="${drive_date_2}"
+                    name="Date"
+                    value="${drive_date_2}" required
+                  />
+                  <label
+                    for="${drive_date_2}"
+                    class="form-control"
+                    style="border: none; display: inline"
+                    >${drive_date_2}</label
+                  ><br />`
+                  document.getElementById("dates-here").innerHTML=temp;
+                </script>
                 <div class="form-group">
                   <input type="checkbox" id="terms" name="terms" value="terms" required/>
                   <label

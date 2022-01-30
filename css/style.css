@@ -9848,23 +9848,21 @@ h5,
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin-top: -10px;
-  color: var(--orange) !important;
   -moz-transition: all 0.7s ease;
   -o-transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
   -ms-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  opacity: 0;
 }
 .owl-carousel .owl-nav .owl-prev span:before,
 .owl-carousel .owl-nav .owl-next span:before {
   font-size: 30px;
 }
 .owl-carousel .owl-nav .owl-prev {
-  left: 0;
+  left: 40px;
 }
 .owl-carousel .owl-nav .owl-next {
-  right: 0;
+  right: 40px;
 }
 .owl-carousel .owl-dots {
   text-align: center;
@@ -9900,10 +9898,10 @@ h5,
   opacity: 1;
 }
 .owl-carousel:hover .owl-nav .owl-prev {
-  left: -25px;
+  left: 0px;
 }
 .owl-carousel:hover .owl-nav .owl-next {
-  right: -25px;
+  right: 0px;
 }
 
 .owl-custom-nav {
@@ -11475,6 +11473,12 @@ textarea.form-control {
 .block-4 .nonloop .owl-nav .owl-next span {
   font-size: 30px;
 }
+
+.owl-carousel .owl-nav .owl-prev span,
+.owl-carousel .owl-nav .owl-next span {
+  color: gray;
+}
+
 .block-4 .nonloop .owl-nav .owl-prev {
   left: 50px;
 }

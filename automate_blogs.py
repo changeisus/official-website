@@ -49,6 +49,8 @@ def createFile(blogs):
         <title>CHANGE IS US - Changing Today for Tomorrow</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="shortcut icon" href="images/ciu-logo-favicon.ico" type="image/x-icon">
         
         <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
@@ -107,7 +109,7 @@ def createFile(blogs):
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Impact</a>
                 <div class="dropdown-menu">
-                    <a href="https://docs.google.com/presentation/d/1gCgncnPpnOV-lC5f5nNkuuQByAhRXivbv7FKQ_qyV7o/edit?usp=sharing" target="_blank" class="dropdown-item">2019 - 2021</a>
+                    <a href="https://docs.google.com/presentation/d/1HonTYveKMRQzDavf7mq0WwR4zeMUOXOdKtAxJo1kx7I/edit?usp=sharing" target="_blank" class="dropdown-item">2019 - 2021</a>
                 </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -175,17 +177,16 @@ def createFile(blogs):
                 <ul class="list-unstyled">
                     <div class="row">
                     <div class="col-6">
-                        <li><a href="index.html" target="_blank" class="py-3 d-block">Home</a></li>
-                        <li><a href="about.html" target="_blank"" class=" py-3 d-block">About</a></li>
-                        <li><a href="apply.html" target="_blank" class="py-3 d-block">Apply</a></li>
-                        <li><a href="project.html" target="_blank" class="py-3 d-block">Project</a></li>
-                    </div>
-                    <div class="col-6">
-                        <li><a href="blog.html" target="_blank" class="py-3 d-block">Blogs</a></li>
-                        <li><a href="#" target="_blank" class="py-3 d-block">Impact</a></li>
-                        <li><a href="partners.html" target="_blank" class="py-3 d-block">Partners</a></li>
-                        <li><a href="contact.html" target="_blank" class="py-3 d-block">Contact</a></li>
-                    </div>
+                        <li><a href="index.html" class="py-3 d-block">Home</a></li>
+                        <li><a href="about.html" class="py-3 d-block">About</a></li>
+                        <li><a href="apply.html" class="py-3 d-block">Apply</a></li>
+                        <li><a href="project.html" class="py-3 d-block">Projects</a></li>
+                  </div>
+                  <div class="col-6">
+                        <li><a href="gallery.html" class="py-3 d-block">Gallery</a></li>
+                        <li><a href="https://docs.google.com/presentation/d/1HonTYveKMRQzDavf7mq0WwR4zeMUOXOdKtAxJo1kx7I/edit?usp=sharing" target="_blank" class="py-3 d-block">Impact</a></li>
+                        <li><a href="partners.html" class="py-3 d-block">Partners</a></li>
+                        <li><a href="contact.html"class="py-3 d-block">Contact</a></li>
                     </div>
                 </ul>
                 </div>

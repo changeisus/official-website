@@ -106,12 +106,12 @@ def createFile(blogs):
                 </li>
                 <li class="nav-item active"><a href="blog.html" class="nav-link">Blogs</a></li>
                 <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Impact</a>
+                <!-- <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Impact</a> 
                 <div class="dropdown-menu">
                     <a href="https://docs.google.com/presentation/d/1HonTYveKMRQzDavf7mq0WwR4zeMUOXOdKtAxJo1kx7I/edit?usp=sharing" target="_blank" class="dropdown-item">2019 - 2021</a>
                 </div>
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" href="#">Collaborations</a>
                 <div class="dropdown-menu">
@@ -184,7 +184,7 @@ def createFile(blogs):
                   </div>
                   <div class="col-6">
                         <li><a href="gallery.html" class="py-3 d-block">Gallery</a></li>
-                        <li><a href="https://docs.google.com/presentation/d/1HonTYveKMRQzDavf7mq0WwR4zeMUOXOdKtAxJo1kx7I/edit?usp=sharing" target="_blank" class="py-3 d-block">Impact</a></li>
+                        <!-- <li><a href="https://docs.google.com/presentation/d/1HonTYveKMRQzDavf7mq0WwR4zeMUOXOdKtAxJo1kx7I/edit?usp=sharing" target="_blank" class="py-3 d-block">Impact</a></li> -->
                         <li><a href="partners.html" class="py-3 d-block">Partners</a></li>
                         <li><a href="contact.html"class="py-3 d-block">Contact</a></li>
                     </div>
